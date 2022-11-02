@@ -145,8 +145,8 @@ class BufferDataset(object):
             while len(self.data) < self.buffer_size and len(
                     self.data) < self.total_size:
                 if len(self.files) == 0:
-                    # self.files = glob.glob(self.path + '.bin.*')
-                    self.files = glob.glob("CS546MP3/results/" + '*.bin.*')
+                    self.files = glob.glob(self.path + '/*.bin.*')
+                    # self.files = glob.glob("CS546MP3/results/" + '*.bin.*')
                     print(self.files)
                     if shuffle:
                         random.shuffle(self.files)
