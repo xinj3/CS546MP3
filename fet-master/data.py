@@ -63,7 +63,7 @@ class BufferDataset(object):
 
     def count_total_size(self):
         line_idx = 0
-        with open(self.path + '/*.meta', 'r', encoding='utf-8') as r:
+        with open(self.path + '.meta', 'r', encoding='utf-8') as r:
         # with open(self.path, 'r', encoding='utf-8') as r:
             for line_idx, _ in enumerate(r, 1):
                 pass
@@ -145,7 +145,7 @@ class BufferDataset(object):
             while len(self.data) < self.buffer_size and len(
                     self.data) < self.total_size:
                 if len(self.files) == 0:
-                    self.files = glob.glob(self.path + '/*.bin.*')
+                    self.files = glob.glob(self.path + '.bin.*')
                     # self.files = glob.glob("CS546MP3/results/" + '*.bin.*')
                     print(self.files)
                     if shuffle:
