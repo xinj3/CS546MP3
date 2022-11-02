@@ -63,8 +63,8 @@ class BufferDataset(object):
 
     def count_total_size(self):
         line_idx = 0
-        # with open(self.path + '.meta', 'r', encoding='utf-8') as r:
-        with open(self.path, 'r', encoding='utf-8') as r:
+        with open(self.path + '/*.meta', 'r', encoding='utf-8') as r:
+        # with open(self.path, 'r', encoding='utf-8') as r:
             for line_idx, _ in enumerate(r, 1):
                 pass
         self.total_size = line_idx
